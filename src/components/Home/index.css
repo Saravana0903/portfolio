@@ -1,0 +1,25 @@
+.home-con{
+    box-shadow:1px 1px 1p 1px lightslategray;
+    border-radius:10px;
+}
+.home-head{
+    color:white;
+    font-size:32px;
+}
+.home-info{
+    background-color:#2d2d33;
+}
+.my-info{
+    display:flex;
+    flex-direction:column;
+}
+.info-item{
+    display:flex;
+    flex-direction:row;
+    margin-bottom:15px;
+    align-items:center;
+}
+.icon-home{
+    font-size:25px;
+    margin-right:15px;
+}
