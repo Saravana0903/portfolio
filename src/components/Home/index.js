@@ -22,7 +22,7 @@ function Home() {
                 I am <br />
                 <span className="text-success">a FullStack</span> <span className="text-danger"> Dev </span> 🧑‍💻 😀 😄
                 </h1>
-                <a href="_RESUME ( VEDA ).docx" download = "saravana.docx">
+                <a href="Saravana's Resume.pdf" download = "saravana.pdf">
                   <button className="btn btn-outline-info">Download Resume</button>
                 </a>
 

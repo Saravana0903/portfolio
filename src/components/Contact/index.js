@@ -1,17 +1,33 @@
-import React , {useRef} from 'react'
+import React , {useRef,useState} from 'react'
 import emailjs from '@emailjs/browser';
+import {Form,Button,FormGroup,Label, Input} from 'reactstrap';
 import './index.css'
 
 function Contact() {
 
   const form = useRef();
-
+  const [usermail,setEmail] = useState('')
+  const changeEmail = (e) => {
+    setEmail(e.value)
+  } 
+  const checkEmail = (e) => {
+    console.log(usermail);
+    if (usermail.endsWith('@gmail.com')) {
+        e.target.valid = true
+        console.log(true);
+    }
+    else{
+      e.target.invalid=true
+      console.log(false);
+    }
+  }
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_o6gae6x', 'template_ttcxop9', form.current, 'I2OJob87mMSBs4MoA')
       .then((result) => {
           console.log(result.text);
+
       }, (error) => {
           console.log(error.text);
       });
@@ -21,13 +37,45 @@ function Contact() {
     <div className='container'>
       <div className='row'>
       <form ref={form} onSubmit={sendEmail}>
-      <label className='col-12 mt-4'>Name</label>
-      <input type="text" className='col-12 mt-2' name="user_name" />
-      <label className='col-12 mt-4'>Email</label>
-      <input type="email" className='col-12 mt-2' name="user_email" />
-      <label className='col-12'>Message</label>
-      <textarea name="message" className='col-12' />
-      <input type="submit" value="Send" />
+    
+      <FormGroup floating className='col-12 mt-3 mb-2'>
+        <Input 
+          type="text"
+          id="username"
+          placeholder="Enter your Name"
+          name="user_name"
+        /> 
+        <Label for="username">
+            Name:
+        </Label>
+      </FormGroup>
+      <FormGroup floating className='col-12 mt-3 mb-2'>
+        <Input 
+          type="email"
+          id="useremail"
+          placeholder="Enter your email"
+          name="user_email"
+          value={usermail}
+          onChange={changeEmail}
+          onBlur={checkEmail}
+        /> 
+        <Label for="useremail">
+            Email:
+        </Label>
+      </FormGroup>
+      <FormGroup floating className='col-12 mt-3 mb-2'>
+        <Input 
+          type="textarea"
+          id="usermsg"
+          placeholder="Enter your msg"
+          name="user_msg"
+        /> 
+        <Label for="user-msg">
+            Suggestions:
+        </Label>
+      </FormGroup>
+      <Button type="submit" value="Send"> Submit </Button>
+    
     </form>
       </div>
     </div>
