@@ -1,26 +1,12 @@
-import React , {useRef,useState} from 'react'
+import React , {useRef} from 'react'
 import emailjs from '@emailjs/browser';
-import {Form,Button,FormGroup,Label, Input} from 'reactstrap';
+import {Button,FormGroup,Label, Input} from 'reactstrap';
 import './index.css'
 
 function Contact() {
 
   const form = useRef();
-  const [usermail,setEmail] = useState('')
-  const changeEmail = (e) => {
-    setEmail(e.value)
-  } 
-  const checkEmail = (e) => {
-    console.log(usermail);
-    if (usermail.endsWith('@gmail.com')) {
-        e.target.valid = true
-        console.log(true);
-    }
-    else{
-      e.target.invalid=true
-      console.log(false);
-    }
-  }
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -55,9 +41,6 @@ function Contact() {
           id="useremail"
           placeholder="Enter your email"
           name="user_email"
-          value={usermail}
-          onChange={changeEmail}
-          onBlur={checkEmail}
         /> 
         <Label for="useremail">
             Email:
