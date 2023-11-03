@@ -23,7 +23,7 @@ function About() {
            </p>
            <div className='pro-con p-4'>
             <div className='con-1'>
-              <h1 className='con-head'>50 + </h1>
+              <h1 className='con-head'>10 + </h1>
               <p className='con-para'>Projects</p>
            </div>
            <div className='con-1'>
@@ -31,7 +31,7 @@ function About() {
               <p className='con-para'>Learning hours </p>
            </div>
            <div className='con-1'>
-              <h1 className='con-head'>450 +</h1>
+              <h1 className='con-head'>300 +</h1>
               <p className='con-para'>Coding Problems</p>
            </div>
            </div>
