@@ -9,7 +9,12 @@ function Contact() {
   
   const sendEmail = (e) => {
     e.preventDefault();
-
+    let name = document.getElementById("username");
+    name.textContent = "";
+    let mail = document.getElementById("useremail");
+    mail.textContent = "";
+    let suggest = document.getElementById("usermsg");
+    suggest.textContent = "";
     emailjs.sendForm('service_o6gae6x', 'template_ttcxop9', form.current, 'I2OJob87mMSBs4MoA')
       .then((result) => {
           console.log(result.text);
