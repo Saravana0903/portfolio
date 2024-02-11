@@ -20,14 +20,14 @@ function Home() {
          <div className="col-12 order-2 order-md-1 col-md-6">
               <h1 className="home-head">
                 I am <br />
-                <span className="text-success">a FullStack</span> <span className="text-danger"> Dev </span> 🧑‍💻 😀 😄
+                <span className="text-success">a FullStack</span> <span className="text-danger"> Dev</span> 🧑‍💻 😀 😄
                 </h1>
                 <a href="Saravana's_Resume_2024.pdf" download = "saravana_resume.pdf">
                   <button className="btn btn-outline-info">Download Resume</button>
                 </a>
 
-              <p className="text-light pt-5">I'm a Full Stack developer having demonstrated skills in React,Node,Express
-              frameworks. I am an Electronics and Communication Engineer minors in Computer Sciences. 
+              <p className="text-light pt-5">I'm a Full Stack developer having demonstrated skills in React,Node and Express
+              frameworks. I am an Electronics and Communication Engineer, doing minors in the Computer Sciences. 
               </p>
               <div className='my-info'>
                 <div className='info-item'>
