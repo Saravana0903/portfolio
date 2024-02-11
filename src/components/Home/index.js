@@ -14,7 +14,7 @@ function Home() {
         </div>
       </div>
       <div className='row bg-dark home-con p-5'>
-         <div className='col-12 order-1 order-md-2 col-md-6'>
+         <div className='col-12 order-1 order-md-2 col-md-5'>
              <Carouselfile />
          </div>
          <div className="col-12 order-2 order-md-1 col-md-6">
