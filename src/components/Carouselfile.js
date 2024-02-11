@@ -9,7 +9,7 @@ import {
 
 const items = [
   {
-    src: 'WhatsApp Image 2023-02-10 at 12.34.48 PM.jpeg',
+    src: 'WhatsApp Image 2024-02-11 at 10.04.09 PM.jpeg',
     altText: 'Slide 1',
     caption: 'Slide 1',
     key: 1,
